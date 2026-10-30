@@ -1,3 +1,2 @@
-// Entry point for Node.js hosting environments
+// Node.js server entry point
 require('./main.js');
-

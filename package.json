@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "next build && node -e \"const fs = require('fs'); ['.next', 'dist'].forEach(d => { if (!fs.existsSync(d)) fs.mkdirSync(d, {recursive: true}); fs.copyFileSync('main.js', d + '/main.js'); fs.copyFileSync('server.js', d + '/server.js'); });\"",
     "start": "next start",
     "lint": "next lint"
   },
