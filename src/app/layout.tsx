@@ -3,8 +3,24 @@ import React, { Suspense } from 'react';
 import { ClientAppShell } from '../components/ClientAppShell';
 import './globals.css';
 
+function getMetadataBase(): URL {
+  const envUrl = process.env.APP_URL;
+  if (envUrl && envUrl !== 'MY_APP_URL') {
+    try {
+      const formatted =
+        envUrl.startsWith('http://') || envUrl.startsWith('https://')
+          ? envUrl
+          : `https://${envUrl}`;
+      return new URL(formatted);
+    } catch {
+      // Fallback if URL is invalid
+    }
+  }
+  return new URL('https://fairuzalurwa.com');
+}
+
 export const metadata: Metadata = {
-  metadataBase: new URL(process.env.APP_URL || 'https://fairuzalurwa.com'),
+  metadataBase: getMetadataBase(),
   title: 'Travel, Government & Business Services in Saudi Arabia | Fairuz Al Urwa Company',
   description:
     'Professional assistance with travel bookings, government services, business registration, company formation and investor services in Saudi Arabia by Fairuz Al Urwa Company.',
