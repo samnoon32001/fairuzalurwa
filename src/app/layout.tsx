@@ -50,6 +50,13 @@ const jsonLdData = {
   logo: '/assets/aistudio/Fairuz_Al_Urwa_Logo_Print_copy_954cd263.png',
   telephone: '+966 55 634 9848',
   email: 'offairuzalurwa@gmail.com',
+  address: {
+    '@type': 'PostalAddress',
+    streetAddress: 'Prince Muriqin Ibn Abdulaziz, Al Ariydh Dist',
+    addressLocality: 'Madinah',
+    addressRegion: 'Al Madinah Province',
+    addressCountry: 'SA',
+  },
   description:
     'Professional assistance with travel bookings, government services, business registration, company formation and investor services in Saudi Arabia.',
   areaServed: {

@@ -119,7 +119,16 @@ export const Footer: React.FC = () => {
             <ul className="space-y-3 text-xs text-slate-200">
               <li className="flex items-start gap-2.5">
                 <MapPin className="w-4 h-4 text-[#FF6B72] shrink-0 mt-0.5" />
-                <span>{siteConfig.officeAddressPlaceholder[language]}</span>
+                <a
+                  href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
+                    siteConfig.officeAddressPlaceholder.en
+                  )}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-white transition-colors"
+                >
+                  {siteConfig.officeAddressPlaceholder[language]}
+                </a>
               </li>
               <li className="flex items-center gap-2.5">
                 <Phone className="w-4 h-4 text-[#FF6B72] shrink-0" />

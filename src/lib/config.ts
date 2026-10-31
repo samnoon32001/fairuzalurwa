@@ -46,9 +46,9 @@ export const DEFAULT_SITE_CONFIG: SiteContactConfig = {
   phoneNumberPlaceholder: '+966 55 634 9848',
   emailPlaceholder: 'offairuzalurwa@gmail.com',
   officeAddressPlaceholder: {
-    en: '[Editable Placeholder: Office Suite / Building Name, Street Name, District, City, Kingdom of Saudi Arabia]',
-    ar: '[عنصر نائب قابل للتعديل: رقم المكتب / اسم المبنى، اسم الشارع، الحي، المدينة، المملكة العربية السعودية]',
-    ur: '[قابلِ ترمیم پلیس ہولڈر: آفس نمبر / عمارت کا نام، سٹریٹ، ڈسٹرکٹ، شہر، مملکتِ سعودی عرب]',
+    en: 'Prince Muriqin Ibn Abdulaziz, Al Ariydh Dist, Madinah, Kingdom of Saudi Arabia',
+    ar: 'طريق الأمير مقرن بن عبد العزيز، حي العريض، المدينة المنورة، المملكة العربية السعودية',
+    ur: 'پرنس مقرن بن عبد العزیز، العریض ڈسٹرکٹ، مدینہ منورہ، مملکتِ سعودی عرب',
   },
   businessHoursPlaceholder: {
     en: '[Editable Placeholder: Sunday – Thursday: 00:00 AM – 00:00 PM | Saturday: 00:00 AM – 00:00 PM]',
@@ -56,9 +56,9 @@ export const DEFAULT_SITE_CONFIG: SiteContactConfig = {
     ur: '[قابلِ ترمیم پلیس ہولڈر: اتوار تا جمعرات: صبح 00:00 تا شام 00:00 | ہفتہ: صبح 00:00 تا شام 00:00]',
   },
   googleMapsPlaceholder: {
-    en: '[Editable Placeholder: Google Maps Coordinates / Embed Location — Kingdom of Saudi Arabia]',
-    ar: '[عنصر نائب قابل للتعديل: موقع خرائط جوجل المضمن — المملكة العربية السعودية]',
-    ur: '[قابلِ ترمیم پلیس ہولڈر: گوگل میپس لوکیشن — مملکتِ سعودی عرب]',
+    en: 'Prince Muriqin Ibn Abdulaziz, Al Ariydh Dist, Madinah, Kingdom of Saudi Arabia',
+    ar: 'طريق الأمير مقرن بن عبد العزيز، حي العريض، المدينة المنورة، المملكة العربية السعودية',
+    ur: 'پرنس مقرن بن عبد العزیز، العریض ڈسٹرکٹ، مدینہ منورہ، مملکتِ سعودی عرب',
   },
   socialLinks: [
     { platform: 'X (Twitter)', placeholderLabel: '[@client_handle_placeholder]', href: '#contact' },

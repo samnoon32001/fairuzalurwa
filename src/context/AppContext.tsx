@@ -33,7 +33,7 @@ interface AppContextValue {
 const AppContext = createContext<AppContextValue | undefined>(undefined);
 
 const LANG_STORAGE_KEY = 'almamlaka_selected_language_v1';
-const CONFIG_STORAGE_KEY = 'fairuz_alurwa_client_config_v2';
+const CONFIG_STORAGE_KEY = 'fairuz_alurwa_client_config_v3';
 
 function pathnameToPageRoute(pathname: string | null): PageRoute {
   if (!pathname || pathname === '/') return 'home';
@@ -85,7 +85,14 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
     try {
       const savedConfig = localStorage.getItem(CONFIG_STORAGE_KEY);
       if (savedConfig) {
-        setSiteConfig({ ...DEFAULT_SITE_CONFIG, ...JSON.parse(savedConfig) });
+        const parsed = JSON.parse(savedConfig);
+        if (parsed.officeAddressPlaceholder?.en?.includes('Placeholder')) {
+          parsed.officeAddressPlaceholder = DEFAULT_SITE_CONFIG.officeAddressPlaceholder;
+        }
+        if (parsed.googleMapsPlaceholder?.en?.includes('Placeholder')) {
+          parsed.googleMapsPlaceholder = DEFAULT_SITE_CONFIG.googleMapsPlaceholder;
+        }
+        setSiteConfig({ ...DEFAULT_SITE_CONFIG, ...parsed });
       }
     } catch {
       // Ignore storage errors
